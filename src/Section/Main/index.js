@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { HomePage, ContactPage } from "../../views";
+import { HomePage, ContactPage, MenuPage } from "../../views";
 const Main = () => {
   return (
     <main>
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/contact" exact component={ContactPage} />
+        <Route path="/menu" exact component={MenuPage} />
       </Switch>
     </main>
   );
