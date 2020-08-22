@@ -1,0 +1,218 @@
+body {
+    font-size: .875rem;
+  }
+  
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  /*
+   * Content
+   */
+  
+  [role="main"] {
+    padding-top: 133px; /* Space for fixed navbar */
+  }
+  
+  @media (min-width: 768px) {
+    [role="main"] {
+      padding-top: 48px; /* Space for fixed navbar */
+    }
+  }
+  
+  /*
+   * Navbar
+   */
+
+   .navbar{
+       padding-right: 10rem !important;
+   }
+  
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+
+  /* .dropdown-menu{
+      max-width: 2rem;
+  } */
+  
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+
+  .notifications-count {
+    position: relative;
+    top: -10px;
+    margin-left: -16px;
+    width: 18px;
+    height: 17px;
+    color: #fff;
+    border-radius: 50%;
+    background: #c95738;
+    font-size: 12px;
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+
+  .card {
+    border: 0;
+    margin: 18px 0;
+    box-shadow: 0 6px 0 0 rgba(0,0,0,.01), 0 15px 32px 0 rgba(0,0,0,.06);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.forgetPass{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.forgetPass:hover{
+ text-decoration: none;
+}
+
+.login{
+  /* position: absolute;
+  top : 16rem;
+  left: 10.5rem;
+  width: 5rem;
+  padding: 5px; */
+  /* float: right; */
+  border: 1px solid #ec4a55 !important;
+	background-color: #ec4a55 !important;
+  width: 6rem;
+  border-radius: 20px;
+  color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px !important;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+input{
+  background-color: #eeeeee !important;
+	border: none !important;
+	margin: 8px 0;
+  width: 100%;
+}
+
+.delView{
+  text-decoration: none !important;
+}
+
+.delView:hover{
+  color: black;
+  font-size: 1.5rem;
+}
+
+.head{
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.line{
+  border-color: #a8a8a8;
+}
+
+.Order-Details td{
+  border: none;
+}
+
+.category:hover{
+  text-decoration: none;
+}
+
+.category .card-body .media-body{
+  color: #6a2c70 !important;
+}
+
+.category .card-body .media-body:hover{
+  color:#f67280 !important;
+  text-decoration: none !important;
+}
+.addCategory{
+  text-decoration: none !important;
+  color: blue!important
+}
+
+.addCategory:hover{
+  text-decoration: none !important;
+  color:#6c757d!important
+}
