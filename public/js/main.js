@@ -1,6 +1,7 @@
 (function ($) {
   /*[ Load page ]
     ===========================================================*/
+
   $(".animsition").animsition({
     inClass: "fade-in",
     outClass: "fade-out",
@@ -106,17 +107,19 @@
 
   /*[ Fixed Header ]
     ===========================================================*/
-  var header = $("header");
-  var logo = $(header).find(".logo img");
+  // var header = $("header");
+  var logo = $(".header").find(".logo img");
   var linkLogo1 = $(logo).attr("src");
   var linkLogo2 = $(logo).data("logofixed");
 
   $(window).on("scroll", function () {
+    // console.log("Scroll function running..");
     if ($(this).scrollTop() > 5 && $(this).width() > 992) {
       $(logo).attr("src", linkLogo2);
-      $(header).addClass("header-fixed");
+      $(".header").addClass("header-fixed");
+      console.log($(".header").hasClass("Deepak"));
     } else {
-      $(header).removeClass("header-fixed");
+      $(".header").removeClass("header-fixed");
       $(logo).attr("src", linkLogo1);
     }
   });
@@ -124,24 +127,25 @@
   /*[ Show/hide sidebar ]
     ===========================================================*/
   $("body").append('<div class="overlay-sidebar trans-0-4"></div>');
-  var ovlSideBar = $(".overlay-sidebar");
-  var btnShowSidebar = $(".btn-show-sidebar");
-  var btnHideSidebar = $(".btn-hide-sidebar");
-  var sidebar = $(".sidebar");
-
-  $(btnShowSidebar).on("click", function () {
-    $(sidebar).addClass("show-sidebar");
-    $(ovlSideBar).addClass("show-overlay-sidebar");
+  // var ovlSideBar = $(".overlay-sidebar");
+  // var btnShowSidebar = ".btn-show-sidebar";
+  // var btnHideSidebar = $(".btn-hide-sidebar");
+  // var sidebar = $(".sidebar");
+  console.log($(".btn-show-sidebar"));
+  $(".sidebarBtn").on("click", () => {
+    console.log("onClick");
+    $(".sidebar").addClass("show-sidebar");
+    $(".overlay-sidebar").addClass("show-overlay-sidebar");
   });
 
-  $(btnHideSidebar).on("click", function () {
-    $(sidebar).removeClass("show-sidebar");
-    $(ovlSideBar).removeClass("show-overlay-sidebar");
+  $(".btn-hide-sidebar").on("click", function () {
+    $(".sidebar").removeClass("show-sidebar");
+    $(".overlay-sidebar").removeClass("show-overlay-sidebar");
   });
 
-  $(ovlSideBar).on("click", function () {
-    $(sidebar).removeClass("show-sidebar");
-    $(ovlSideBar).removeClass("show-overlay-sidebar");
+  $(".overlay-sidebar").on("click", function () {
+    $(".sidebar").removeClass("show-sidebar");
+    $(".overlay-sidebar").removeClass("show-overlay-sidebar");
   });
 
   /*[ Isotope ]

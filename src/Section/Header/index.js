@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <div className="wrap-menu-header gradient1 trans-0-4">
         <div className="container h-full">
           <div className="wrap_header trans-0-3">
@@ -78,7 +78,7 @@ const Header = () => {
                 </i>
               </NavLink>
 
-              <button className="btn-show-sidebar m-l-33 trans-0-4"></button>
+              <button className="sidebarBtn btn-show-sidebar m-l-33 trans-0-4" />
             </div>
           </div>
         </div>
